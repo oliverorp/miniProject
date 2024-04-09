@@ -1,0 +1,48 @@
+
+.big-title{
+    font-size: 36px;
+    margin-top: 40px;
+    text-align: center;
+    color: rgb(16, 16, 225);
+}
+
+.center-text{
+    text-align: center;
+}
+
+ .flex-container {
+     display: block;
+     justify-content: center;
+     /* Center items horizontally */
+     align-items: stretch; 
+     /* Center items vertically */
+     /* Set the height of the flex container */
+     height: 1000px;
+     /* Set the background color */
+     flex-direction: row;
+     /* flex-wrap: wrap; */
+     width: 100%;
+     background-color: light;
+     margin-left: 20px;
+     
+
+     
+ }
+
+ .flex-tile {
+    /* display: flex;
+    justify-content: center;
+    /* Center items horizontally */
+    /* align-items: center;
+
+    /* background-color: #95d3e5; */
+    border: 10 px solid black;
+    flex-direction: row; 
+    
+ }
+
+
+ /* div{
+    display: flex;
+    flex-direction: row;
+ } */

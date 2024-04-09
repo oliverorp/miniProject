@@ -1,0 +1,19 @@
+#!/bin/bash
+# install dependencies and run app
+
+# Stop on errors
+# See https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+set -Eeuo pipefail
+set -x
+
+# Create a Python virtual environment
+python3 -m venv env
+
+# Activate Python virtual environment
+source env/bin/activate
+
+# install flask
+pip install Flask
+
+# install
+npm ci .

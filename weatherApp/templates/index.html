@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Michigan Weather Forecaster</title>
+  </head>
+
+  <body>
+    <header class="big-title">Michigan Weather Forecasting Page</header>
+    <h4 class="center-text">
+      All data from this website is courtesy of
+      <a href="https://www.weather.gov/documentation/services-web-api">
+        The National Weather Service</a
+      >
+    </h4>
+    <br />
+    <div id="reactEntry" class="flex-container">Loading...</div>
+
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/bundle.js') }}"
+    ></script>
+  </body>
+</html>
