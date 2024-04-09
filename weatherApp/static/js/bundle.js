@@ -33676,7 +33676,9 @@ function Weather() {
       var temp = data["properties"]["relativeLocation"]["properties"]["city"];
       console.log(temp);
       setCity(data["properties"]["relativeLocation"]["properties"]["city"]);
+      setState(data["properties"]["relativeLocation"]["properties"]["state"]);
       console.log(city);
+      console.log(state);
       var newUrl = data["properties"]["forecast"];
       return fetch(newUrl);
     }).then(function (response) {
@@ -33690,7 +33692,7 @@ function Weather() {
       alert("Make sure coordinates are valid and 4 decimal places");
       console.log(error);
     });
-  }, [latitude, longitude, city]);
+  }, [latitude, longitude, city, state]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("form", {
     id: "myForm"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("input", {
@@ -33704,7 +33706,7 @@ function Weather() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", {
     type: "button",
     onClick: handleSubmit
-  }, "Submit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", null, "Showing results for ", city), posts.slice(0, 6).map(function (post, index) {
+  }, "Submit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", null, "Showing results for ", city, ", ", state), posts.slice(0, 6).map(function (post, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_tile__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: index,
       post: post

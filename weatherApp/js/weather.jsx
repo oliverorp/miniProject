@@ -36,8 +36,10 @@ function Weather() {
           data["properties"]["relativeLocation"]["properties"]["city"];
         console.log(temp);
         setCity(data["properties"]["relativeLocation"]["properties"]["city"]);
+        setState(data["properties"]["relativeLocation"]["properties"]["state"]);
 
         console.log(city);
+        console.log(state);
 
         const newUrl = data["properties"]["forecast"];
         return fetch(newUrl);
@@ -56,7 +58,7 @@ function Weather() {
         alert("Make sure coordinates are valid and 4 decimal places");
         console.log(error);
       });
-  }, [latitude, longitude, city]);
+  }, [latitude, longitude, city, state]);
 
   return (
     <div>
@@ -67,7 +69,9 @@ function Weather() {
           Submit
         </button>
       </form>
-      <h2>Showing results for {city}</h2>
+      <h2>
+        Showing results for {city}, {state}
+      </h2>
 
       {posts.slice(0, 6).map((post, index) => (
         <div>
